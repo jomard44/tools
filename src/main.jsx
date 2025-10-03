@@ -1,6 +1,7 @@
 import "./index.css";
 import React from "react";
 import ReactDOM from "react-dom/client";
+import { Analytics } from "@vercel/analytics";
 import App from "./App.jsx";
 
 // Add error boundary for production
@@ -42,6 +43,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <ErrorBoundary>
       <App />
+      <Analytics />
     </ErrorBoundary>
   </React.StrictMode>
 );
