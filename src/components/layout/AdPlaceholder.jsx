@@ -26,7 +26,7 @@ export default function AdPlaceholder({ position, className = '' }) {
       <ins className="adsbygoogle"
            style={{ display: 'block' }}
            data-ad-client="ca-pub-9587370950538764"
-           data-ad-slot={position === 'header' ? '1234567890' : '0987654321'} // Replace with your actual ad slot IDs
+           data-ad-slot="5695311938"
            data-ad-format="auto"
            data-full-width-responsive="true"></ins>
     </div>

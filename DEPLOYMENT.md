@@ -2,44 +2,24 @@
 
 ## Adding Google AdSense
 
-1. **Create a Google AdSense Account**
-   - Visit [Google AdSense](https://www.google.com/adsense)
-   - Sign up and verify your account
-   - Submit your site for review
+Your Google AdSense account is already set up with:
+- Publisher ID: ca-pub-9587370950538764
+- Ad Unit ID (Horizontal): 5695311938
 
-2. **Add AdSense Code to the Project**
-   - Once approved, get your AdSense code from Google AdSense dashboard
-   - Add the following script to the `<head>` section of `index.html`:
-   ```html
-   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-YOUR_PUBLISHER_ID"
-        crossorigin="anonymous"></script>
-   ```
-   Replace `YOUR_PUBLISHER_ID` with your actual AdSense publisher ID.
+If you need to add more ad units:
+1. Go to [Google AdSense](https://www.google.com/adsense)
+2. Create new ad units in your dashboard
+3. Update the AdPlaceholder component with new ad unit IDs
 
-3. **Using the AdPlaceholder Component**
-   - The project already includes an `AdPlaceholder` component in `src/components/layout/AdPlaceholder.jsx`
-   - To display ads, update the component with your ad unit code:
-   ```jsx
-   <ins class="adsbygoogle"
-        style="display:block"
-        data-ad-client="ca-pub-YOUR_PUBLISHER_ID"
-        data-ad-slot="YOUR_AD_SLOT_ID"
-        data-ad-format="auto"
-        data-full-width-responsive="true"></ins>
-   <script>
-        (adsbygoogle = window.adsbygoogle || []).push({});
-   </script>
-   ```
-
-4. **Ad Placement**
-   - Ads are currently placed in the header and footer areas
-   - Additional ad units can be added by using the `<AdPlaceholder />` component
-   - Follow Google AdSense policies for ad placement and density
-
-5. **Testing**
-   - Use Google AdSense's Preview tool to verify ad placements
-   - Ensure ads are responsive across different screen sizes
-   - Check that ads don't interfere with site functionality
+Current ad implementation:
+```jsx
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9587370950538764"
+     data-ad-slot="5695311938"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+```
 
 ## Deploying on Vercel
 

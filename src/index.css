@@ -5,3 +5,13 @@
 .test-style {
   @apply text-blue-500 font-bold;
 }
+
+@layer components {
+  .ad-container {
+    @apply w-full overflow-hidden min-h-[100px] flex justify-center items-center;
+  }
+  
+  .ad-container ins.adsbygoogle {
+    @apply w-full min-h-[100px];
+  }
+}
