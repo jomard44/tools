@@ -1,8 +1,11 @@
 import "./index.css";
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { Analytics } from "@vercel/analytics";
+import { inject } from "@vercel/analytics";
 import App from "./App.jsx";
+
+// Initialize Vercel Analytics
+inject();
 
 // Add error boundary for production
 class ErrorBoundary extends React.Component {
@@ -43,7 +46,6 @@ ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <ErrorBoundary>
       <App />
-      <Analytics />
     </ErrorBoundary>
   </React.StrictMode>
 );
