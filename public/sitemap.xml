@@ -1,52 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://yourdomain.com/</loc>
+    <loc>https://www.supertoolshub.com/</loc>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://yourdomain.com/tools/json-formatter</loc>
+    <loc>https://www.supertoolshub.com/tools/json-formatter</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://yourdomain.com/tools/word-counter</loc>
+    <loc>https://www.supertoolshub.com/tools/word-counter</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://yourdomain.com/tools/markdown-previewer</loc>
+    <loc>https://www.supertoolshub.com/tools/markdown-previewer</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://yourdomain.com/tools/unit-converter</loc>
+    <loc>https://www.supertoolshub.com/tools/unit-converter</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://yourdomain.com/tools/regex-tester</loc>
+    <loc>https://www.supertoolshub.com/tools/regex-tester</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://yourdomain.com/tools/base64</loc>
+    <loc>https://www.supertoolshub.com/tools/base64</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://yourdomain.com/tools/image-resizer</loc>
+    <loc>https://www.supertoolshub.com/tools/image-resizer</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://yourdomain.com/tools/color-picker</loc>
+    <loc>https://www.supertoolshub.com/tools/color-picker</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://yourdomain.com/tools/password-generator</loc>
+    <loc>https://www.supertoolshub.com/tools/password-generator</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
