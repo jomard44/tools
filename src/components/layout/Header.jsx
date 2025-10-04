@@ -55,16 +55,9 @@ export default function Header() {
               )}
             </button>
 
-            {/* Desktop navigation */}
+            {/* Desktop navigation - removed GitHub link */}
             <nav className="hidden md:flex items-center gap-6">
-              <a
-                href="https://github.com/jomard44/tools"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors"
-              >
-                GitHub
-              </a>
+              {/* Intentionally left empty to keep spacing consistent */}
             </nav>
           </div>
         </div>
@@ -72,14 +65,7 @@ export default function Header() {
         {/* Mobile menu */}
         {isMobileMenuOpen && (
           <nav className="md:hidden mt-4 border-t dark:border-gray-700 pt-4">
-            <a
-              href="https://github.com/jomard44/tools"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="block py-2 text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors"
-            >
-              GitHub
-            </a>
+            {/* Mobile nav intentionally empty (GitHub link removed) */}
           </nav>
         )}
       </div>
