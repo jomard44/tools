@@ -33,6 +33,22 @@ export default function Footer() {
                   Report an Issue
                 </a>
               </li>
+              <li>
+                <a
+                  href="/privacy"
+                  className="text-sm text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400"
+                >
+                  Privacy Policy
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/contact"
+                  className="text-sm text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400"
+                >
+                  Contact
+                </a>
+              </li>
             </ul>
           </div>
           <div>
