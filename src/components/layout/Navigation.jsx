@@ -8,21 +8,21 @@ const tools = [
         name: "JSON Formatter",
         path: "/tools/json-formatter",
         description: "Format, validate, and beautify JSON",
-        icon: "{ }"
+        icon: "{ }",
       },
       {
         name: "Word Counter",
         path: "/tools/word-counter",
         description: "Count words, characters, and more",
-        icon: "📝"
+        icon: "📝",
       },
       {
         name: "Markdown Previewer",
         path: "/tools/markdown-previewer",
         description: "Live markdown preview",
-        icon: "📄"
-      }
-    ]
+        icon: "📄",
+      },
+    ],
   },
   {
     category: "Converters",
@@ -31,15 +31,15 @@ const tools = [
         name: "Unit Converter",
         path: "/tools/unit-converter",
         description: "Convert between different units",
-        icon: "↔️"
+        icon: "↔️",
       },
       {
         name: "Base64 Tool",
         path: "/tools/base64",
         description: "Encode/decode Base64",
-        icon: "🔄"
-      }
-    ]
+        icon: "🔄",
+      },
+    ],
   },
   {
     category: "Developer Tools",
@@ -48,21 +48,21 @@ const tools = [
         name: "Regex Tester",
         path: "/tools/regex-tester",
         description: "Test regular expressions",
-        icon: "🎯"
+        icon: "🎯",
       },
       {
         name: "Color Picker",
         path: "/tools/color-picker",
         description: "Pick colors & convert formats",
-        icon: "🎨"
+        icon: "🎨",
       },
       {
         name: "Password Generator",
         path: "/tools/password-generator",
         description: "Generate secure passwords",
-        icon: "🔒"
-      }
-    ]
+        icon: "🔒",
+      },
+    ],
   },
   {
     category: "Media",
@@ -71,10 +71,10 @@ const tools = [
         name: "Image Resizer",
         path: "/tools/image-resizer",
         description: "Resize images client-side",
-        icon: "🖼️"
-      }
-    ]
-  }
+        icon: "🖼️",
+      },
+    ],
+  },
 ];
 
 export default function Navigation() {

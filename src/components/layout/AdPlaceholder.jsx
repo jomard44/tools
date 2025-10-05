@@ -1,21 +1,29 @@
 import { useEffect, useState } from "react";
 import PropTypes from "prop-types";
+import { useLocation } from "react-router-dom";
 
 export default function AdPlaceholder({ position, className = "" }) {
+  const location = useLocation();
   const [shouldRenderAd, setShouldRenderAd] = useState(false);
 
   useEffect(() => {
     // Determine whether the current page has sufficient publisher content
     function hasPublisherContent() {
       try {
-        const main = document.querySelector("main") || document.querySelector("#root");
+        const excludedPaths = ["/contact", "/privacy"]; // don't show ads on these pages
+        if (excludedPaths.includes(location.pathname)) return false;
+
+        const main =
+          document.querySelector("main") || document.querySelector("#root");
         if (!main) return false;
 
         const text = (main.innerText || "").trim();
         const wordCount = text ? text.split(/\s+/).length : 0;
 
         // Count interactive / media elements which indicate real content
-        const interactiveCount = main.querySelectorAll("img, video, canvas, textarea, input, pre, code, table, svg").length;
+        const interactiveCount = main.querySelectorAll(
+          "img, video, canvas, textarea, input, pre, code, table, svg"
+        ).length;
 
         // Heuristics: consider page to have content if there's >= 80 words OR any interactive/media elements
         return wordCount >= 80 || interactiveCount > 0;
@@ -36,13 +44,13 @@ export default function AdPlaceholder({ position, className = "" }) {
     } catch (err) {
       console.error("Error initializing ad:", err);
     }
-  }, []);
+  }, [location.pathname]); // re-run when route changes
 
   const baseClasses = "w-full overflow-hidden transition-all duration-200";
   const positionClasses = {
     header: "py-4 mb-4",
     sidebar: "my-4",
-    bottom: "py-4 mt-4 backdrop-blur-sm bg-white/90 dark:bg-gray-800/90"
+    bottom: "py-4 mt-4 backdrop-blur-sm bg-white/90 dark:bg-gray-800/90",
   };
 
   // Development placeholder: show explanatory, non-ad visual that matches site style
@@ -75,7 +83,9 @@ export default function AdPlaceholder({ position, className = "" }) {
             </span>
           </div>
           <p className="text-xs text-gray-500 dark:text-gray-400 max-w-prose">
-            Ads are disabled in development. In production ads will only show when there is sufficient publisher content on the page to comply with AdSense policies.
+            Ads are disabled in development. In production ads will only show
+            when there is sufficient publisher content on the page to comply
+            with AdSense policies.
           </p>
         </div>
       </div>
@@ -89,7 +99,10 @@ export default function AdPlaceholder({ position, className = "" }) {
   }
 
   return (
-    <div className={`${baseClasses} ${positionClasses[position]} ${className}`} aria-hidden="false">
+    <div
+      className={`${baseClasses} ${positionClasses[position]} ${className}`}
+      aria-hidden="false"
+    >
       <ins
         className="adsbygoogle"
         style={{ display: "block" }}

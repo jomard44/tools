@@ -4,14 +4,19 @@ export default function Footer() {
       <div className="container mx-auto px-4 py-8">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
-            <h3 className="text-sm font-semibold text-gray-900 dark:text-white mb-3">About</h3>
+            <h3 className="text-sm font-semibold text-gray-900 dark:text-white mb-3">
+              About
+            </h3>
             <p className="text-sm text-gray-600 dark:text-gray-300">
-              TinyTools Hub provides free online utilities for developers and users.
-              All tools run locally in your browser with no data collection.
+              TinyTools Hub provides free online utilities for developers and
+              users. All tools run locally in your browser with no data
+              collection.
             </p>
           </div>
           <div>
-            <h3 className="text-sm font-semibold text-gray-900 dark:text-white mb-3">Resources</h3>
+            <h3 className="text-sm font-semibold text-gray-900 dark:text-white mb-3">
+              Resources
+            </h3>
             <ul className="space-y-2">
               <li>
                 <a
@@ -52,7 +57,9 @@ export default function Footer() {
             </ul>
           </div>
           <div>
-            <h3 className="text-sm font-semibold text-gray-900 dark:text-white mb-3">Support</h3>
+            <h3 className="text-sm font-semibold text-gray-900 dark:text-white mb-3">
+              Support
+            </h3>
             <p className="text-sm text-gray-600 dark:text-gray-300">
               If you find these tools helpful, consider{" "}
               <a
@@ -70,7 +77,8 @@ export default function Footer() {
         <div className="mt-8 pt-8 border-t border-gray-200 dark:border-gray-700">
           <div className="text-center text-sm text-gray-600 dark:text-gray-400">
             <p>
-              © {new Date().getFullYear()} TinyTools Hub. All tools are free to use.
+              © {new Date().getFullYear()} TinyTools Hub. All tools are free to
+              use.
             </p>
           </div>
         </div>

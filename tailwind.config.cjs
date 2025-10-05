@@ -14,17 +14,17 @@ export default {
         },
       },
       animation: {
-        'spin-slow': 'spin 3s linear infinite',
+        "spin-slow": "spin 3s linear infinite",
       },
       typography: {
         DEFAULT: {
           css: {
-            maxWidth: '100ch',
-            color: 'inherit',
+            maxWidth: "100ch",
+            color: "inherit",
             a: {
-              color: 'inherit',
-              '&:hover': {
-                color: '#3B82F6',
+              color: "inherit",
+              "&:hover": {
+                color: "#3B82F6",
               },
             },
           },
@@ -32,8 +32,5 @@ export default {
       },
     },
   },
-  plugins: [
-    require("@tailwindcss/typography"),
-    require("@tailwindcss/forms"),
-  ],
-}
+  plugins: [require("@tailwindcss/typography"), require("@tailwindcss/forms")],
+};

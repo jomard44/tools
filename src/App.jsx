@@ -33,15 +33,39 @@ function App() {
                 <main className="p-6">
                   <Routes>
                     <Route path="/" element={<JsonFormatter />} />
-                    <Route path="/tools/json-formatter" element={<JsonFormatter />} />
-                    <Route path="/tools/word-counter" element={<WordCounter />} />
-                    <Route path="/tools/markdown-previewer" element={<MarkdownPreviewer />} />
-                    <Route path="/tools/unit-converter" element={<UnitConverter />} />
-                    <Route path="/tools/regex-tester" element={<RegexTester />} />
+                    <Route
+                      path="/tools/json-formatter"
+                      element={<JsonFormatter />}
+                    />
+                    <Route
+                      path="/tools/word-counter"
+                      element={<WordCounter />}
+                    />
+                    <Route
+                      path="/tools/markdown-previewer"
+                      element={<MarkdownPreviewer />}
+                    />
+                    <Route
+                      path="/tools/unit-converter"
+                      element={<UnitConverter />}
+                    />
+                    <Route
+                      path="/tools/regex-tester"
+                      element={<RegexTester />}
+                    />
                     <Route path="/tools/base64" element={<Base64Tool />} />
-                    <Route path="/tools/image-resizer" element={<ImageResizer />} />
-                    <Route path="/tools/color-picker" element={<ColorPicker />} />
-                    <Route path="/tools/password-generator" element={<PasswordGenerator />} />
+                    <Route
+                      path="/tools/image-resizer"
+                      element={<ImageResizer />}
+                    />
+                    <Route
+                      path="/tools/color-picker"
+                      element={<ColorPicker />}
+                    />
+                    <Route
+                      path="/tools/password-generator"
+                      element={<PasswordGenerator />}
+                    />
                   </Routes>
                 </main>
                 <div className="px-6">
