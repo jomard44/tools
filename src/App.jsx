@@ -16,6 +16,10 @@ import ImageResizer from "./tools/ImageResizer";
 import ColorPicker from "./tools/ColorPicker";
 import PasswordGenerator from "./tools/PasswordGenerator";
 
+// Page imports
+import Contact from "./pages/Contact";
+import Privacy from "./pages/Privacy";
+
 function App() {
   return (
     <Router>
@@ -66,6 +70,9 @@ function App() {
                       path="/tools/password-generator"
                       element={<PasswordGenerator />}
                     />
+                    {/* Footer pages */}
+                    <Route path="/contact" element={<Contact />} />
+                    <Route path="/privacy" element={<Privacy />} />
                     <Route path="/ezoic-bRaUnVELe7XCECUPu3shuBT41ciPxT.html" />
                   </Routes>
                 </main>
