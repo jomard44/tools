@@ -66,7 +66,7 @@ function App() {
                       path="/tools/password-generator"
                       element={<PasswordGenerator />}
                     />
-                    <Route path="/ezoic-bRaUnVELe7XCECUPu3shuBT41ciPxT.html" element={<JsonFormatter />} />
+                    <Route path="/ezoic-bRaUnVELe7XCECUPu3shuBT41ciPxT.html" />
                   </Routes>
                 </main>
                 <div className="px-6">
