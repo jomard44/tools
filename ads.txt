@@ -4,3 +4,4 @@
 google.com, pub-9587370950538764, DIRECT, f08c47fec0942fa0
 # If you use Ezoic and they require ads.txt entries, add those records here as instructed by Ezoic.
 # Do NOT include redirects or HTTP status lines in this file. This file must be served as plain text at /ads.txt
+

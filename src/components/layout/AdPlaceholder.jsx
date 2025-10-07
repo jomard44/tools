@@ -1,10 +1,11 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import PropTypes from "prop-types";
 import { useLocation } from "react-router-dom";
 
 export default function AdPlaceholder({ position, className = "" }) {
   const location = useLocation();
   const [shouldRenderAd, setShouldRenderAd] = useState(false);
+  const adRef = useRef(null);
 
   useEffect(() => {
     // Determine whether the current page has sufficient publisher content
@@ -35,16 +36,26 @@ export default function AdPlaceholder({ position, className = "" }) {
 
     const hasContent = hasPublisherContent();
     setShouldRenderAd(hasContent);
-
-    try {
-      // Only initialize ads when in production AND there is publisher content
-      if (process.env.NODE_ENV === "production" && hasContent) {
-        (window.adsbygoogle = window.adsbygoogle || []).push({});
-      }
-    } catch (err) {
-      console.error("Error initializing ad:", err);
-    }
   }, [location.pathname]); // re-run when route changes
+
+  // Ensure we only call adsbygoogle.push after the ad element is mounted
+  useEffect(() => {
+    if (process.env.NODE_ENV !== "production") return;
+    if (!shouldRenderAd) return;
+
+    // Wait for the next tick so the <ins> is mounted
+    const t = setTimeout(() => {
+      try {
+        if (adRef.current) {
+          (window.adsbygoogle = window.adsbygoogle || []).push({});
+        }
+      } catch (err) {
+        console.error("Error initializing ad:", err);
+      }
+    }, 0);
+
+    return () => clearTimeout(t);
+  }, [shouldRenderAd]);
 
   const baseClasses = "w-full overflow-hidden transition-all duration-200";
   const positionClasses = {
@@ -104,6 +115,7 @@ export default function AdPlaceholder({ position, className = "" }) {
       aria-hidden="false"
     >
       <ins
+        ref={adRef}
         className="adsbygoogle"
         style={{ display: "block" }}
         data-ad-client="ca-pub-9587370950538764"

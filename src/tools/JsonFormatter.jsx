@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import CopyButton from "../components/CopyButton";
 
 export default function JsonFormatter() {
@@ -8,7 +8,7 @@ export default function JsonFormatter() {
   const [lastValidInput, setLastValidInput] = useState("");
 
   // Load last input from localStorage if available
-  useState(() => {
+  useEffect(() => {
     const saved = localStorage.getItem("jsonFormatter.lastInput");
     if (saved) setInput(saved);
   }, []);
